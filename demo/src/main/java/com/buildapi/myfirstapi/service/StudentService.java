@@ -28,7 +28,10 @@ public class StudentService {
         students.add(student);
     }
 
+public void removeStudent(Student student){
 
+        students.remove(student);
+}
 
 
 }

@@ -4,10 +4,7 @@ package com.buildapi.myfirstapi.controller;
 import com.buildapi.myfirstapi.service.StudentService;
 import com.buildapi.myfirstapi.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 //This is my Controller
@@ -32,6 +29,9 @@ public class StudentController {
     public void addStudent(@RequestBody Student student){
         studentService.addStudent(student);
     }
-
+    @DeleteMapping("/students")
+public void removeStudent(Student student){
+        studentService.removeStudent(student);
+}
 
 }
